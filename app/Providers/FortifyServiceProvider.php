@@ -32,7 +32,7 @@ class FortifyServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loginAndRegister();
-        $this->register();
+        /* $this->register(); */
         $this->password();
         $this->twoFactor();
 
@@ -84,9 +84,9 @@ class FortifyServiceProvider extends ServiceProvider
             ]);
         });
 
-        Fortify::registerView(function () {
+       /*  Fortify::registerView(function () {
             return view('auth.register');
-        });
+        }); */
 
         Fortify::createUsersUsing(CreateNewUser::class);
     }
