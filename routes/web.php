@@ -10,6 +10,10 @@ Route::post('/shorten', [UrlController::class, 'create'])->name('su_create');
 Route::get('/+{url:keyword}', [UrlController::class, 'showDetail'])->name('su_detail');
 Route::get('/delete/{url:keyword}', [UrlController::class, 'delete'])->name('su_delete');
 
+Route::get('/register', function(){
+    return '';
+})->name('su_delete');
+
 Route::namespace('Dashboard')->prefix('admin')->group(function () {
     Route::middleware('auth')->group(function () {
         // Dashboard (My URLs)
