@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
+// 👇 Importar el trait de Sanctum
+use Laravel\Sanctum\HasApiTokens;
 
 /**
  * @property int            $id
@@ -25,7 +27,7 @@ use Illuminate\Support\Facades\DB;
  */
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
     use \Spatie\Permission\Traits\HasRoles;
 
     /**

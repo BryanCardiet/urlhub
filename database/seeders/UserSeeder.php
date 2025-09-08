@@ -19,10 +19,5 @@ class UserSeeder extends Seeder
             'password'   => Hash::make('uxqH0_341'),
         ])->assignRole('admin');
 
-        User::create([
-            'name'       => 'Aracelly Acuña',
-            'email'      => 'aacuna@lamarka.pe',
-            'password'   => Hash::make('Titkufvmtm-21'),
-        ]);
     }
 }

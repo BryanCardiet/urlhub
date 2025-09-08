@@ -13,12 +13,12 @@ return [
     /*
      * If you set false, users must be registered to create Short URL.
      */
-    'public_site' => env('UH_PUBLIC_SITE', true),
+    'public_site' => env('UH_PUBLIC_SITE', false),
 
     /*
      * Enable users registration. If disabled it, no one can register.
      */
-    'registration' => env('UH_REGISTRATION', true),
+    'registration' => env('UH_REGISTRATION', false),
 
     /*
     |--------------------------------------------------------------------------
